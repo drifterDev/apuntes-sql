@@ -2,9 +2,9 @@
 
 ## Llaves
 
-- Primaria: Identificador unico de la tabla
+- Primaria: Son la clave principal de un registro dentro de una tabla. Es el identificador único de un registro en una tabla
 
-- Foranea: Llave primaria replicada en una segunda tabla
+- Foranea: Se colocan en la tabla hija, contienen el mismo valor que la llave primaria del registro padre
 
 ## SQL
 
@@ -23,6 +23,8 @@ Son aquellas instrucciones que permiten manipular los datos en una base de datos
 Gestor de bases de datos. Son un conjunto de programas no visibles que administran y gestionan la información que contiene una base de datos. Hacen posible administrar todo acceso a la base de datos
 
 Tienen el objetivo de servir de interfaz entre la base de datos, el usuario y las aplicaciones
+
+## Relacionales y no relacionales
 
 | Tipo de Base de Datos | Relacionales                                 | No Relacionales                                 |
 | --------------------- | -------------------------------------------- | ----------------------------------------------- |
