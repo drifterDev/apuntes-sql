@@ -10,9 +10,9 @@ Para más información, consulta el archivo LICENSE en la raíz del repositorio.
 /* COMANDO CREATE */
 
 -- Crear una base de datos
-CREATE DATABASE dbs_store_02;
+CREATE DATABASE dbs_store;
 
-USE dbs_store_02;
+USE dbs_store;
 
 CREATE TABLE clientes(
 id INT PRIMARY KEY,
