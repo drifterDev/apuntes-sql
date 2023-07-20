@@ -6,9 +6,11 @@ Este código se proporciona bajo la Licencia MIT.
 Para más información, consulta el archivo LICENSE en la raíz del repositorio. 
 */
 
-/* ACTUALIZAR DATOS */
+/* INSTRUCCIÓN LIMIT */
 
-UPDATE clientes SET apellido='Murillo', telefono='+98752342'
-WHERE id='1';
+SELECT * FROM clientes LIMIT 5;
 
-UPDATE clientes SET telefono='+987798987' WHERE nacionalidad='Mexico';
+SELECT * FROM clientes LIMIT 5,8;
+-- Despues del quinto muestra los siguientes 8
+
+SELECT * FROM clientes LIMIT 0,3;
