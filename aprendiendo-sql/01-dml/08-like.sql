@@ -1,5 +1,13 @@
+/* 
+Autor: Mateo Álvarez Murillo
+Fecha de creación: 2023
+
+Este código se proporciona bajo la Licencia MIT.
+Para más información, consulta el archivo LICENSE en la raíz del repositorio. 
+*/
+
 /* CLAUSULA LIKE */
- 
+
 SELECT * FROM clientes WHERE nombre LIKE '%e%';
 -- Los que tienen e
 SELECT * FROM clientes WHERE nombre LIKE '%a';
