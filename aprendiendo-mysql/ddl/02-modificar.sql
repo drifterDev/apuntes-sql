@@ -1,3 +1,10 @@
+/* 
+ Autor: Mateo Álvarez Murillo
+ Fecha de creación: 2023
+ Este código se proporciona bajo la Licencia MIT.
+ Para más información, consulta el archivo LICENSE en la raíz del repositorio. 
+ */
+
 USE dbs_blog;
 
 /* RENOMBRAR TABLA */
@@ -7,6 +14,7 @@ ALTER TABLE usuarios RENAME to nuevos_usuarios;
 ALTER TABLE nuevos_usuarios RENAME TO usuarios;
 
 /* Cambiar columna */
+
 ALTER TABLE usuarios CHANGE apellidos apellido VARCHAR(100) NULL;
 
 ALTER TABLE usuarios MODIFY apellido CHAR(50) NOT NULL;

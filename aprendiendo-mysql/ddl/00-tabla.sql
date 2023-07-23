@@ -5,15 +5,15 @@
  Para más información, consulta el archivo LICENSE en la raíz del repositorio. 
  */
 
-/* SUBCONSULTAS */
+/* INT(número de cifras)*/
 
-SELECT * FROM clientes;
+USE dbs_blog;
 
-SELECT * FROM pedidos;
-
-SELECT id, nombre
-FROM clientes
-WHERE id IN(
-        SELECT id_clientes
-        FROM pedidos
+CREATE TABLE
+    usuarios(
+        id INT(11),
+        nombre VARCHAR(100),
+        apellido VARCHAR(255),
+        email VARCHAR(100),
+        password VARCHAR(255)
     );

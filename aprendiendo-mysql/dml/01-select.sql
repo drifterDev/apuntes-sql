@@ -5,15 +5,6 @@
  Para más información, consulta el archivo LICENSE en la raíz del repositorio. 
  */
 
-/* SUBCONSULTAS */
+USE dbs_blog;
 
-SELECT * FROM clientes;
-
-SELECT * FROM pedidos;
-
-SELECT id, nombre
-FROM clientes
-WHERE id IN(
-        SELECT id_clientes
-        FROM pedidos
-    );
+SELECT * FROM usuarios WHERE id>5;
