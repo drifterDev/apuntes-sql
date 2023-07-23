@@ -19,6 +19,8 @@ ALTER TABLE usuarios CHANGE apellidos apellido VARCHAR(100) NULL;
 
 ALTER TABLE usuarios MODIFY apellido CHAR(50) NOT NULL;
 
+ALTER TABLE entradas MODIFY descripcion mediumtext NULL;
+
 /* Añadir columna */
 
 ALTER TABLE usuarios ADD nacionalidad VARCHAR(100) NOT NULL;
