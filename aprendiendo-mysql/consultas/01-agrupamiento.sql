@@ -7,12 +7,14 @@
 
 USE dbs_blog;
 
-SELECT * FROM usuarios;
+SELECT
+    COUNT(titulo) AS Numero_entradas,
+    titulo,
+    categoria_id
+FROM entradas
+GROUP BY categoria_id
+HAVING LENGTH(titulo) <= 20;
 
-UPDATE usuarios SET fecha=CURDATE() WHERE id=1;
+SELECT AVG(categoria_id) FROM entradas;
 
-DELETE FROM usuarios WHERE id=20;
-
-DELETE FROM usuarios;
-
--- Con el anterior comando se borran todos los registros
+SELECT SUM(id) FROM usuarios;
