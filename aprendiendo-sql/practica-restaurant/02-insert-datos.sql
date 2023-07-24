@@ -191,9 +191,7 @@ VALUES (1, 4),
     -- Penne Arrabiata con Crema (11, 1),
     -- Hamburguesa Gourmet con Mozzarella con Carne de res (11, 7),
     -- Hamburguesa Gourmet con Mozzarella con Queso (11, 8);
-
--- Hamburguesa Gourmet con Mozzarella con Huevo
-
+    -- Hamburguesa Gourmet con Mozzarella con Huevo
 INSERT INTO
     pedidos (
         nota,

@@ -46,7 +46,7 @@ GROUP BY cli.id, c.id;
 
 SELECT
     cli.nombre AS cliente,
-    SUM(e.id) AS cantidad
+    COUNT(e.id) AS cantidad
 FROM clientes cli
     INNER JOIN encargos e ON e.cliente_id = cli.id
 GROUP BY cli.id
