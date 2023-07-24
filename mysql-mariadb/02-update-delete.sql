@@ -36,3 +36,9 @@ ROLLBACK;
 -- Todo regreso a la normalidad
 
 SELECT * FROM `stations`;
+
+SELECT * FROM `lines`;
+
+SELECT * FROM `lines_stations`;
+
+SELECT * FROM `trains`;
