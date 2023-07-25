@@ -39,3 +39,39 @@ SELECT
 FROM alumnos
 GROUP BY email
 HAVING COUNT(*) > 1;
+
+DELETE FROM alumnos
+WHERE email = (
+        SELECT email
+        FROM alumnos
+        GROUP BY email
+        HAVING COUNT(*) > 1
+    );
+
+SELECT
+    carrera_id AS carrera,
+    COUNT(*) AS cantidad
+FROM alumnos
+GROUP BY carrera_id;
+
+SELECT
+    tutor_id AS tutor,
+    COUNT(*) AS cantidad
+FROM alumnos
+GROUP BY tutor_id;
+
+SELECT MIN(nombre) FROM alumnos ;
+
+SELECT MAX(nombre) FROM alumnos ;
+
+SELECT MIN(nombre) FROM alumnos GROUP BY tutor_id;
+
+SELECT MAX(nombre) FROM alumnos GROUP BY tutor_id;
+
+SELECT AVG(cantidad)
+FROM (
+        SELECT COUNT(*) AS cantidad
+        FROM alumnos
+        GROUP BY
+            tutor_id
+    ) AS cantidad_tutores;
