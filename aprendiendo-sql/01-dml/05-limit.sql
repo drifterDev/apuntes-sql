@@ -14,3 +14,8 @@ SELECT * FROM clientes LIMIT 5,8;
 -- Despues del quinto muestra los siguientes 8
 
 SELECT * FROM clientes LIMIT 0,3;
+
+/* Tambien hay un OFFSET que nos dice apartir
+ de cual comenzamos a agarrar */
+
+SELECT * FROM clientes OFFSET 0 LIMIT 3;
