@@ -29,8 +29,7 @@ CREATE TABLE
 INSERT INTO `drivers` (name)
 VALUES ("Pedro"), ("Pablo"), ("José"), ("María"), ("Amanda");
 
-SELECT *
-FROM `drivers`;
+SELECT * FROM `drivers`;
 
 DELIMITER // 
 
@@ -40,11 +39,7 @@ CREATE TRIGGER UPDATE_ACTIVE_DRIVERS AFTER UPDATE ON
 	INSERT INTO
 	    `active_drivers`(driver_id)
 	VALUES (NEW.id);
-	
-	ELSE
-	DELETE FROM `active_drives`
-	WHERE driver_id = NEW.id;
-	
+	ELSE DELETE FROM `active_drives` WHERE driver_id = NEW.id;
 	END IF;
 END; 
 
@@ -52,12 +47,8 @@ END;
 
 DELIMITER;
 
-SELECT *
-FROM `active_drivers`;
+SELECT * FROM `active_drivers`;
 
-UPDATE `drivers`
-SET status = 1
-WHERE id = 1;
+UPDATE `drivers` SET status = 1 WHERE id = 1;
 
-SELECT *
-FROM `active_drivers`;
+SELECT * FROM `active_drivers`;
