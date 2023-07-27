@@ -1,3 +1,1 @@
-# .gitattributes file which reclassifies `.js` files as Java:
-
-  *.sql linguist-language=SQL
+*.sql linguist-language=SQL
