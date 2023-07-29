@@ -33,7 +33,7 @@ CREATE TABLE especialidad(
   especialidad VARCHAR(45)
 );
 
-CREATE TABLE medico_has_especialida(
+CREATE TABLE medico_has_especialidad(
   id_medico INT,
   id_especialidad INT,
 
