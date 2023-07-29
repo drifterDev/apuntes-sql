@@ -18,6 +18,10 @@ Son aquellas instrucciones que me permiten crear definir objetos de bases de dat
 
 Son aquellas instrucciones que permiten manipular los datos en una base de datos
 
+## DCL
+
+Son aquellas instrucciones que permiten crear y controlar usuarios y permisos que interactúan con las bases de datos
+
 ## DBMS
 
 Gestor de bases de datos. Son un conjunto de programas no visibles que administran y gestionan la información que contiene una base de datos. Hacen posible administrar todo acceso a la base de datos
