@@ -8,10 +8,4 @@ for i in range(m):
             act=0
         res.append((i+1, act+1))
         act+=1
-
-
-        
-
-
-
 print(res)
