@@ -5,8 +5,8 @@
  Para más información, consulta el archivo LICENSE en la raíz del repositorio. 
  */
 
- -- Acceder a las vistas pero a nada más
+-- Acceder a las vistas pero a nada más
 
- GRANT SELECT
- ON dbs_store.pedidos_clientes
- TO 'visitante'@'localhost';
+GRANT
+SELECT
+    ON dbs_store.pedidos_clientes TO 'visitante' @'localhost';

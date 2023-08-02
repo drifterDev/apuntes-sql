@@ -10,7 +10,7 @@
  lenguaje de programación escribamos unas consulta tal cual,
  podemos hacer una rutina que haga dicha consulta */
 
-USE dbs_metro; 
+USE dbs_metro;
 
 DELIMITER //
 
@@ -20,14 +20,11 @@ BOOLEAN) BEGIN
 	IF meters THEN
 	SELECT
 	    ST_Distance_Sphere(station_one, station_two) AS distances;
-	
 	ELSE
 	SELECT
 	    ST_Distance_Sphere(station_one, station_two) / 1000 AS distances;
-	
 	END IF;
-	
-	END / /
+	END / / 
 
 
 DELIMITER ;

@@ -1,58 +1,32 @@
 /* TRIGGER REGISTRA INSERT */
-CREATE TABLE historial_cliente_insert(
-id INT,
-nombre VARCHAR(45),
-fecha DATE,
-usuario VARCHAR(45));
 
-CREATE TRIGGER insert_cliente_AI AFTER INSERT
-ON clientes FOR EACH ROW 
-INSERT INTO historial_cliente_insert(id,nombre,fecha,usuario)VALUES
-(NEW.id, NEW.nombre, CURDATE(), current_user());
+CREATE TABLE
+    historial_cliente_insert(
+        id INT,
+        nombre VARCHAR(45),
+        fecha DATE,
+        usuario VARCHAR(45)
+    );
 
-
-INSERT INTO clientes(id,nombre,apellido,email,telefono,id_nacionalidad)VALUES
-(121,'Carolina','Murillo','aljfd',2783459,3);
-
-
-/* TRIGGER ACTUALIZACION */
-CREATE TABLE historial_cliente_update(
-id INT,
-nombre_nuevo VARCHAR(45),
-nombre_antiguo VARCHAR(45),
-apellido_nuevo VARCHAR(45),
-apellido_antiguo VARCHAR(45),
-email_nuevo VARCHAR(45),
-email_antiguo VARCHAR(45),
-telefono_nuevo VARCHAR(45),
-telefono_antiguo VARCHAR(45),
-fecha DATE,
-usuario VARCHAR(45)
-);
-
-CREATE TRIGGER update_clientes_BU BEFORE UPDATE ON clientes
-FOR EACH ROW
-INSERT INTO historial_cliente_update(id, nombre_nuevo, nombre_antiguo, apellido_nuevo, apellido_antiguo,
-email_nuevo, email_antiguo, telefono_nuevo, telefono_antiguo, fecha, usuario)VALUES
-(NEW.id, NEW.nombre, OLD.nombre, NEW.apellido, OLD.apellido, NEW.email,OLD.email,NEW.telefono,OLD.telefono,curdate(),current_user());
-
-update clientes SET email='ashfdi', telefono=12121212122 WHERE id=121;
-
-
-/* TRIGGER DELETE */
-CREATE TABLE historial_clientes_delete(
-id INT,
-nombre VARCHAR(45),
-apellido VARCHAR(45),
-email VARCHAR(45),
-telefono VARCHAR(45),
-fecha DATE,
-usuario VARCHAR(45)
-);
-
-CREATE TRIGGER delete_clientes_AD AFTER DELETE ON clientes
-FOR EACH ROW INSERT INTO historial_clientes_delete
-(id,nombre,apellido,email,telefono,fecha,usuario)VALUES
-(OLD.id,OLD.nombre,OLD.apellido,OLD.email,OLD.telefono,curdate(),current_user());
-
-DELETE FROM clientes WHERE id=121;
+CREATE TRIGGER INSERT_CLIENTE_AI AFTER INSERT ON CLIENTES 
+FOR EACH ROW INSERT INTO HISTORIAL_CLIENTE_INSERT(
+ID, NOMBRE, FECHA, USUARIO) VALUES(NEW.ID, NEW.NOMBRE
+, CURDATE(), CURRENT_USER()) ; INSERT INTO CLIENTES
+(ID, NOMBRE, APELLIDO, EMAIL, TELEFONO, ID_NACIONALIDAD
+) VALUES(121, 'CAROLINA', 'MURILLO', 'ALJFD', 2783459
+, 3) ; /* TRIGGER ACTUALIZACION */ 
+CREATE TABLE HISTORIAL_CLIENTE_UPDATE(ID INT, NOMBRE_NUEVO 
+VARCHAR(45), NOMBRE_ANTIGUO VARCHAR(45), APELLIDO_NUEVO 
+VARCHAR(45), APELLIDO_ANTIGUO VARCHAR(45), EMAIL_NUEVO 
+VARCHAR(45), EMAIL_ANTIGUO VARCHAR(45), TELEFONO_NUEVO 
+VARCHAR(45), TELEFONO_ANTIGUO VARCHAR(45), FECHA DATE
+, USUARIO VARCHAR(45)) ; CREATE TRIGGER UPDATE_CLIENTES_BU 
+BEFORE UPDATE ON CLIENTES FOR EACH ROW INSERT INTO 
+HISTORIAL_CLIENTE_UPDATE(ID, NOMBRE_NUEVO, NOMBRE_ANTIGUO
+, APELLIDO_NUEVO, APELLIDO_ANTIGUO, EMAIL_NUEVO, EMAIL_ANTIGUO
+, TELEFONO_NUEVO, TELEFONO_ANTIGUO, FECHA, USUARIO
+) VALUES(NEW.ID, NEW.NOMBRE, OLD.NOMBRE, NEW.APELLIDO
+, OLD.APELLIDO, NEW.EMAIL, OLD.EMAIL, NEW.TELEFONO
+, OLD.TELEFONO, CURDATE(), CURRENT_USER()) ; UPDATE 
+CLIENTES SET EMAIL ='ASHFDI' 
+	, telefono=12121212122 WHERE id=121;

@@ -70,7 +70,8 @@ SELECT MAX(nombre) FROM alumnos GROUP BY tutor_id;
 
 SELECT AVG(cantidad)
 FROM (
-        SELECT COUNT(*) AS cantidad
+        SELECT
+            COUNT(*) AS cantidad
         FROM alumnos
         GROUP BY
             tutor_id

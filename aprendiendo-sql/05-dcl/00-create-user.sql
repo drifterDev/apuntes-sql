@@ -5,8 +5,8 @@
  Para más información, consulta el archivo LICENSE en la raíz del repositorio. 
  */
 
- CREATE USER  'visitante'@'localhost'
- IDENTIFIED BY '12345678';
+CREATE USER 'visitante'@'localhost' IDENTIFIED BY '12345678';
 
- -- Visualizar los usuarios
- SELECT USER FROM mysql.`user`;
+-- Visualizar los usuarios
+
+SELECT USER FROM mysql.`user`;
