@@ -1,11 +1,6 @@
-# Recursos y Apuntes de SQL, MySQL y Bases de Datos
+# SQL y MySQL
 
-Este repositorio contiene recursos y apuntes relacionados con SQL, MySQL y diferentes bases de datos. Está diseñado para organizar y compartir el material que he creado durante mis cursos de aprendizaje en esta área.
-
-Dentro de este repositorio, encontrarás una variedad de recursos y archivos relacionados con SQL, MySQL y bases de datos. Estos recursos incluyen:
-
-- Códigos SQL y scripts que he creado para practicar y aplicar los conceptos aprendidos.
-- Notas y apuntes que he tomado durante mis cursos y estudios sobre SQL y bases de datos. Estas notas son una herramienta útil para repasar y consolidar los conocimientos adquiridos.
+Este repositorio contiene recursos y apuntes de SQL, enfocados en el aprendizaje y la práctica de esta tecnología esencial en la creación de bases de datos. Utilizando también el gestor de bases de datos MySQL.
 
 ## Contribuciones
 
