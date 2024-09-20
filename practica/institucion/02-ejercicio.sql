@@ -18,20 +18,20 @@ SELECT COUNT(*)/2 FROM alumnos;
 SELECT * FROM alumnos WHERE id>500;
 
 SELECT
-    YEAR(fecha_incorporacion) AS year,
-    MONTH(fecha_incorporacion) AS month,
-    DAYOFMONTH(fecha_incorporacion) AS day,
-    HOUR(fecha_incorporacion) AS hours,
-    MINUTE(fecha_incorporacion) AS minutes,
-    SECOND(fecha_incorporacion) AS seconds
+	YEAR(fecha_incorporacion) AS year,
+	MONTH(fecha_incorporacion) AS month,
+	DAYOFMONTH(fecha_incorporacion) AS day,
+	HOUR(fecha_incorporacion) AS hours,
+	MINUTE(fecha_incorporacion) AS minutes,
+	SECOND(fecha_incorporacion) AS seconds
 FROM alumnos;
 
 SELECT
-    nombre,
-    apellido,
-    YEAR(fecha_incorporacion) AS year,
-    MONTH(fecha_incorporacion) AS month
+	nombre,
+	apellido,
+	YEAR(fecha_incorporacion) AS year,
+	MONTH(fecha_incorporacion) AS month
 FROM alumnos
 WHERE
-    YEAR(fecha_incorporacion) = 2018
-    AND MONTH(fecha_incorporacion) = 3;
+	YEAR(fecha_incorporacion) = 2018
+	AND MONTH(fecha_incorporacion) = 3;
