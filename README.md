@@ -1,6 +1,6 @@
 # Aprendiendo SQL y MySQL
 
-Este repositorio contiene recursos y apuntes de SQL, enfocados en el aprendizaje y la práctica de esta tecnología esencial en la creación de bases de datos. Utilizando de paso el gestor de bases de datos MySQL.
+Este repositorio contiene apuntes y notas de SQL, enfocados en el aprendizaje y la práctica de esta tecnología esencial en la creación de bases de datos. Utilizando de paso el gestor de bases de datos MySQL.
 
 ## Contribuciones
 
